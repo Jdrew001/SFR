@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Email Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: unset !important;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        table {
+            border-collapse: collapse;
+            border: none;
+        }
+        .header {
+            text-align: center;
+            padding: 10px 0;
+        }
+        .header img {
+            max-width: 100%;
+            margin-bottom: 15px;
+        }
+        .content h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            background-color: rgb(9, 26, 59);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .date-container {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .date-container td {
+            width: 50%;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .border-content {
+            border: 1px solid rgba(9, 26, 59, 0.4);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .border-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .border-content p, .border-content li {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .button {
+            text-decoration: none !important;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin: 5px;
+        }
+        .button.primary {
+            background-color: rgb(9, 26, 59);
+            color: white !important;
+            border: 1px solid rgb(9, 26, 59) !important;
+        }
+        .button.secondary {
+            background-color: transparent;
+            color: rgb(9, 26, 59) !important;
+            border: 1px solid rgb(9, 26, 59);
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #555;
+            text-align: center;
+        }
+        .footer a {
+            color: rgb(9, 26, 59);
+            text-decoration: none;
+        }
+        @media only screen and (max-width: 750px) {
+            table {
+                width: 100% !important;
+            }
+        }
+
+
+        /* Force light mode for Apple Mail and WebKit-based clients */
+        @media (prefers-color-scheme: dark) {
+            body, .email-container {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+            }
+            a {
+                color: #007BFF !important; /* Ensure links remain visible */
+            }
+        }
+
+        /* Specific targeting for Outlook.com (Web) */
+        [data-ogsc] body, 
+        [data-ogsc] .email-container {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
+
+        /* Specific targeting for Gmail dark mode */
+        u + #body a, 
+        u + #body span, 
+        u + #body div {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header Section -->
+        <div class="header">
+            <table style="width: 85%; margin: auto">
+                <tr>
+                    <td>
+                        <img src="https://chmeetings-app.s3.us-east-1.amazonaws.com/1738299961326-banner.jpg" alt="Logo 1">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Content Section -->
+        <div class="content">
+            <h2>
+                <span>Motivate &amp; Equip Church Ministry Teams</span><br>
+                <span style="font-size: 18px">Saturday June 21st - 10:00 AM to 3:00 PM</span>
+            </h2>
+            <br>
+            <div class="border-content">
+                <h3><strong>WAY OF LIFE CHURCH - HURST (Pastor Kevin Shindoll)</strong></h3>
+                <h3 style="font-size: 18px"><a href="https://maps.apple.com/?q=1332+Yates+Drive+Hurst,+TX+76053" target="_blank" rel="noopener noreferrer">1332 Yates Drive Hurst, TX 76053 </a></h3>
+                <p>
+                    We look forward to an anointed day of sharing impactful Kingdom Principles that will bless every pastor, every minister, and every saint that participates.
+                </p>
+                <p>
+                    Working under the guidance of the NTXD Superintendent, Board, and NAM Directors, SFR teams offer support to North American missionaries and their churches, along with other churches with a need, throughout North Texas.
+                </p>
+                <p>
+                    We would also appeal to you to invite others involved in ministry in your local church to to take part in the workshop, connect with other like-minded NTXD Apostolics with similar ministry focus and receive practical training in areas such as: 
+                </p>
+                <ul>
+                    <li>
+                        <strong>10:00 AM - 10:20 AM - Opening Comments</strong>
+                        <br>
+                        <span style="font-size:12px; padding-left: 15px">Gene Holley Jr - NTXD Superintendent</span>
+                    </li>
+                    <li>
+                        <strong>10:20 AM - 10:30 AM - Origin & Heart of SFR</strong>
+                        <br>
+                        <span style="font-size:12px; padding-left: 15px">Greg Wheeler Pastor & SFR Director</span>
+                    </li>
+                    <li>
+                        <strong>10:30 AM - 11:10 AM - Leadership</strong>
+                        <br>
+                        <span style="font-size:12px; padding-left: 15px">Tom Foster, Pastor & SE Section Presbyter</span>
+                    </li>
+                    <li>
+                        <strong>11:15 AM - NOON Breakout Session # 1</strong><br>
+                        <span style="font-size:12px; padding-left: 15px"><strong>Prayer Ministry</strong> - Michael Watts, Pastor & NAM Director</span>
+                        <br>
+                        <span style="font-size:12px; padding-left: 15px"><strong>Telling The Story: Ministry Through Media</strong> - Spencer Jordan, Evangelist</span>
+                        <br>
+                        <span style="font-size:12px; padding-left: 15px"><strong>The Philosophy of Kid's Ministry</strong> - Dalton Dismore, DFC</span>
+                    </li>
+                    <li>
+                        <strong>12:15 PM - 1:00 PM Breakout Session # 2</strong><br>
+                        <span style="font-size:12px; padding-left: 15px"><strong>Outreach Ministry</strong> - Gary Sones, Pastor Los Pentecostales Fort Worth</span>
+                        <br>
+                        <span style="font-size:12px; padding-left: 15px"><strong>Youth Ministry</strong> - Julien Hunt, DFC</span>
+                        <br>
+                        <span style="font-size:12px; padding-left: 15px"><strong>Hospitality / Ministry of 1st Impressions</strong> - Connie Prieto & Suzette Harris, DFC</span>
+                    </li>
+                    <li>
+                        <strong>1:15 PM - 2:00 PM</strong>
+                        <br>
+                        <span style="font-size:12px; padding-left: 15px">Altar Working - Josh Herring, NAM Pastor Revival Tabernacle</span>
+                    </li>
+                    <li>
+                        <strong>2:00 PM - 2:45 PM</strong><br>
+                        <span style="font-size:12px; padding-left: 15px">Mobilizing Ministry - Shay Mann, Pastor The Life Church</span>
+                    </li>
+                    <li>
+                        <strong>2:45 PM - 3:00 PM</strong><br>
+                        <span style="font-size:12px; padding-left: 15px">Annointed TO GO! - Tom Foster, Pastor & SE Section Presbyter</span>
+                    </li>
+                </ul>
+                <p>
+                    Looking forward to you participating in the Event and what God will do at the Spiritual First Responder Ministry Workshop!
+                </p>
+                <p>
+                    Click the information link below for more information on the SFR Training Workshop and to receive regular updates regarding SFR events! Click the video link to hear more about the vision and mission of Spiritual First Responders!
+                </p>
+                <br>
+                <p>
+                    The NTXD needs <strong>you</strong>. Will <strong>YOU</strong> go?
+                </p>
+            </div>
+            <br>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://form.jotform.com/220944810814151" class="button primary">SFR Information</a>
+                <a href="https://youtu.be/CquJjvTD0Kk" class="button secondary">About SFR</a>
+            </div>
+        </div>
+        <br><br>
+        <!-- Footer Section -->
+        <div class="footer">
+            <p><strong>Spiritual First Responders</strong>, North Texas District UPCI</p>
+            <p>Email: <a href="mailto:gwheeler@christpentecostal.org">SFR Mail</a> | Phone: 817.271.9395</p>
+        </div>
+    </div>
+</body>
+</html>
