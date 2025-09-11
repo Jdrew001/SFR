@@ -1,8 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Email Template</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SFR Impact Weekend - Los Pentecostales Church</title>
+    <!--[if mso]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,12 +23,50 @@
         .container {
             max-width: unset !important;
         }
+        /* Better email client compatibility */
         .email-container {
             max-width: 600px;
             margin: auto;
             background-color: #ffffff;
             padding: 20px;
             border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Improved mobile responsiveness */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                padding: 15px !important;
+                margin: 10px !important;
+            }
+            .content h2 {
+                font-size: 20px !important;
+                padding: 20px 15px !important;
+            }
+            .content h2 span:first-child {
+                font-size: 24px !important;
+                margin-bottom: 6px !important;
+            }
+            .border-content {
+                padding: 15px !important;
+            }
+            .button {
+                display: block !important;
+                width: calc(100% - 40px) !important;
+                margin: 10px auto !important;
+                text-align: center !important;
+            }
+        }
+        
+        /* Better link styling */
+        a {
+            color: rgb(9, 26, 59);
+            text-decoration: underline;
+        }
+        
+        a:hover {
+            color: #1a3a8a;
+            text-decoration: none;
         }
         table {
             border-collapse: collapse;
@@ -35,11 +83,25 @@
         .content h2 {
             font-size: 24px;
             margin-bottom: 20px;
-            background-color: rgb(9, 26, 59);
+            background: linear-gradient(135deg, rgb(9, 26, 59) 0%, #1a3a8a 100%);
             color: white;
             text-align: center;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 25px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(9, 26, 59, 0.3);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        .content h2 span:first-child {
+            font-weight: bold;
+            font-size: 28px;
+            display: block;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        .content h2 span:last-child {
+            font-weight: 400;
+            opacity: 0.95;
+            line-height: 1.4;
         }
         .date-container {
             width: 100%;
@@ -52,13 +114,15 @@
             font-weight: bold;
         }
         .border-content {
-            border: 1px solid rgba(9, 26, 59, 0.4);
-            padding: 20px;
+            border: 1px solid rgba(9, 26, 59, 0.2);
+            padding: 25px;
             border-radius: 8px;
+            background-color: #fafbfc;
         }
         .border-content h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: rgb(9, 26, 59);
         }
         .border-content p, .border-content li {
             font-size: 14px;
@@ -68,20 +132,39 @@
         .button {
             text-decoration: none !important;
             display: inline-block;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 14px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
             margin: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            min-width: 120px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
         }
         .button.primary {
-            background-color: rgb(9, 26, 59);
+            background: linear-gradient(135deg, rgb(9, 26, 59) 0%, #1a3a8a 100%);
             color: white !important;
-            border: 1px solid rgb(9, 26, 59) !important;
+            border: 2px solid rgb(9, 26, 59) !important;
+        }
+        .button.primary:hover {
+            background: linear-gradient(135deg, #1a3a8a 0%, #2a4a9a 100%) !important;
+            border-color: #1a3a8a !important;
+            box-shadow: 0 4px 12px rgba(9, 26, 59, 0.3) !important;
+            transform: translateY(-1px);
         }
         .button.secondary {
-            background-color: transparent;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
             color: rgb(9, 26, 59) !important;
-            border: 1px solid rgb(9, 26, 59);
+            border: 2px solid rgb(9, 26, 59);
+        }
+        .button.secondary:hover {
+            background: linear-gradient(135deg, rgb(9, 26, 59) 0%, #1a3a8a 100%) !important;
+            color: white !important;
+            box-shadow: 0 4px 12px rgba(9, 26, 59, 0.3) !important;
+            transform: translateY(-1px);
         }
         .footer {
             margin-top: 20px;
@@ -93,10 +176,40 @@
             color: rgb(9, 26, 59);
             text-decoration: none;
         }
-        @media only screen and (max-width: 750px) {
-            table {
-                width: 100% !important;
+        /* Outlook-specific fixes */
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            .button {
+                mso-hide: all;
             }
+        }
+        
+        /* Better list styling */
+        ol, ul {
+            padding-left: 20px;
+        }
+        
+        ol li, ul li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        /* Improved text hierarchy */
+        .urgent-text {
+            background-color: #e8f4f8;
+            border: 1px solid #b3d9e8;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #2c5f7a;
+            font-weight: 500;
+        }
+        
+        .location-highlight {
+            background-color: #f0f7ff;
+            border-left: 4px solid rgb(9, 26, 59);
+            padding: 12px 15px;
+            margin: 12px 0;
+            border-radius: 0 6px 6px 0;
         }
 
         /* Hanging indent utility classes */
@@ -146,10 +259,10 @@
     <div class="email-container">
         <!-- Header Section -->
         <div class="header">
-            <table style="width: 85%; margin: auto">
+            <table style="width: 85%; margin: auto" role="presentation">
                 <tr>
                     <td>
-                        <img src="https://chmeetings-app.s3.us-east-1.amazonaws.com/1738299961326-banner.jpg" alt="Logo 1">
+                        <img src="https://chmeetings-app.s3.us-east-1.amazonaws.com/1738299961326-banner.jpg" alt="Spiritual First Responders Banner - Impact Weekend" width="100%" style="height: auto; display: block;">
                     </td>
                 </tr>
             </table>
@@ -159,72 +272,75 @@
         <div class="content">
             <h2>
                 <span>Impact Weekend</span><br>
-                <span style="font-size: 18px">Los Pentecostales Church | East Fort Worth, TX</span>
+                <span style="font-size: 18px">Los Pentecostales Church | Pastor Gary Sones<br>Fort Worth, TX</span>
             </h2>
             <br>
             <div class="border-content">
                 <h3><strong>Greetings North Texas Pastors!</strong></h3>
                 <p>
-                    <strong>YOUR HELP IS NEEDED,</strong> to identify Volunteers to assist with the bilingual Bless The Community Event in East Fort Worth, TX!
+                    <strong>YOUR HELP IS NEEDED</strong> to identify Volunteers to assist with the bilingual Bless The Community Event in Fort Worth, TX!
                 </p>
-                <p>
-                    There are <strong>SIX areas of need!</strong><br>If there are volunteers or teams from your Church that could help with any of these areas, please let me know.
-                </p>
+                <div class="urgent-text">
+                    <strong>URGENT:</strong> There are <strong>SIX areas of need!</strong> If there are volunteers or teams from your Church that could help with any of these areas, please let me know.
+                </div>
                 <ol>
-                    <li >
+                    <li>
                         <strong>Help with Outreach on Saturday Morning August 16th</strong>
-                        <br>
-                        <span style="font-size:12px">
-                            <strong>This is the most urgent need is for Volunteers</strong> to help with Outreach to passout invitations to homes and apartments nearby. After brief instructions and prayer, we will pass out Invitations until about 12:30pm, then return to the Church.
-                        </span>
-                        <br>
-                        <span style="font-size:12px">
-                            <strong>We will meet 9:45am AT:</strong>
-                        </span>
-                        <br>
-                        <span style="font-size:12px">
-                            <a href="https://maps.apple.com/?q=7505+John+T+White+Rd+Fort+Worth,+TX+76120" target="_blank" rel="noopener noreferrer">Los Pentecostales Church 7505 John T White Rd Fort Worth, TX 76120</a>
-                        </span>
+                        <div class="urgent-text">
+                            <strong>MOST URGENT NEED:</strong> Volunteers to help with Outreach to pass out invitations to homes and apartments nearby. After brief instructions and prayer, we will pass out invitations until about 12:30pm, then return to the Church.
+                        </div>
+                        <div class="location-highlight">
+                            <strong>Meeting Time & Location:</strong><br>
+                            <strong>9:45 AM at:</strong> 
+                            <a href="https://maps.apple.com/?q=7505+John+T+White+Rd+Fort+Worth,+TX+76120" target="_blank" rel="noopener noreferrer" aria-label="Open Los Pentecostales Church location in maps">Los Pentecostales Church<br>7505 John T White Rd, Fort Worth, TX 76120</a>
+                        </div>
                     </li>
-                    <li >
+                    <li>
                         <strong>Event Setup</strong>
-                        <br>
-                        <span style="font-size:12px;">We will then help the local church set up for the event on the Church Grounds from 12:15 PM to 2 PM.</span>
-                        <br>
-                        <span style="font-size:12px;">The Event is from 2pm to 4pm</span>
-                        <br>
-                        <span style="font-size:12px;">
-                            <strong>Location:</strong> <a href="https://maps.apple.com/?q=7505+John+T+White+Rd+Fort+Worth,+TX+76120" target="_blank" rel="noopener noreferrer">Los Pentecostales Church 7505 John T White Rd Fort Worth, TX 76120</a>
-                        </span>
+                        <div style="margin-top: 8px;">
+                            Help the local church set up for the event on the Church Grounds from <strong>12:15 PM to 2:00 PM</strong>.<br>
+                            The Event runs from <strong>2:00 PM to 4:00 PM</strong>
+                        </div>
+                        <div class="location-highlight">
+                            <strong>Location:</strong> 
+                            <a href="https://maps.apple.com/?q=7505+John+T+White+Rd+Fort+Worth,+TX+76120" target="_blank" rel="noopener noreferrer" aria-label="Open Los Pentecostales Church location in maps">Los Pentecostales Church<br>7505 John T White Rd, Fort Worth, TX 76120</a>
+                        </div>
                     </li>
-                    <li >
+                    <li>
                         <strong>Connection Team to meet Guests</strong>
+                        <div style="margin-top: 8px; font-size: 14px;">
+                            Welcome and connect with community members during the Impact Event
+                        </div>
                     </li>
-                    <li >
+                    <li>
                         <strong>Altar Team to help pray with Guests at the Event</strong>
+                        <div style="margin-top: 8px; font-size: 14px;">
+                            Provide prayer support for community members during the event
+                        </div>
                     </li>
-                    <li >
+                    <li>
                         <strong>Assistance for Children's Ministry</strong>
-                        <br>
-                        <span style="font-size:12px;">Dallas First Church is providing a team to help.</span>
+                        <div style="margin-top: 8px; font-size: 14px;">
+                            <em>Note: Dallas First Church is providing a team to help with this area</em>
+                        </div>
                     </li>
-                    <li >
+                    <li>
                         <strong>Prayer Team - Thursday Night August 14th at 7:30 PM</strong>
-                        <br>
-                        <span style="font-size:12px;">We will have Focused Prayer for the Church and the Community Impact Weekend.</span>
-                        <br>
-                        <span style="font-size:12px;">Prayer Service will be bilingual.</span>
+                        <div style="margin-top: 8px;">
+                            Focused Prayer for the Church and the Community Impact Weekend<br>
+                            <em>Prayer Service will be bilingual</em>
+                        </div>
                     </li>
                 </ol>
                 <br>
                 <p>
                     <strong>Below is the SFR Impact Agenda for the weekend</strong>
                 </p>
-                <ul>
+                 <ul>
                     <li>
                         <strong>Thursday, August 14th at 7:30 PM</strong>
                         <br>
-                        <span style="font-size:12px; padding-left: 15px">Focused prayer event</span>
+                        <span style="font-size:12px; padding-left: 15px">Focused prayer event led by Conner Fisk (The Life Church – Dallas)</span>
                         <br>
                         <span style="font-size:12px; padding-left: 15px">
                             <strong>Location:</strong> <a href="https://maps.apple.com/?q=7505+John+T+White+Rd+Fort+Worth,+TX+76120" target="_blank" rel="noopener noreferrer">Los Pentecostales Church 7505 John T White Rd Fort Worth, TX 76120</a>
@@ -242,19 +358,19 @@
                     <li>
                         <strong>Saturday, August 16th</strong>
                         <br>
-                        <span style="font-size:12px; padding-left: 15px"><strong>9:45 am – 12:30 pm:</strong> Community Outreach (Meet at Los Pentecostales Church)</span>
+                        <span style="font-size:12px; padding-left: 15px">9:45 am – 12:30 pm: Community Outreach (Meet at Los Pentecostales Church)</span>
                         <br>
-                        <span style="font-size:12px; padding-left: 15px"><strong>12:30 pm – 2:00 pm:</strong> Setup for Impact Event</span>
+                        <span style="font-size:12px; padding-left: 15px">12:30 pm – 2:00 pm: Setup for Impact Event</span>
                         <br>
-                        <span style="font-size:12px; padding-left: 15px"><strong>2:00 pm – 4:00 pm:</strong> Bless the Community Impact Event</span>
+                        <span style="font-size:12px; padding-left: 15px">2:00 pm – 4:00 pm: Bless the Community Impact Event with Evangelist Isaac Chavez and Dalton Dismore & Children's Ministry Team from Dallas First Church</span>
                         <br>
                         <span style="font-size:12px; padding-left: 15px">
                             <strong>Location:</strong> <a href="https://maps.apple.com/?q=7505+John+T+White+Rd+Fort+Worth,+TX+76120" target="_blank" rel="noopener noreferrer">Los Pentecostales Church 7505 John T White Rd Fort Worth, TX 76120</a>
                         </span>
                     </li>
                 </ul>
-                <div style="text-align: center; margin-top: 20px;">
-                    <a href="https://9AF4623BEBD7FA6A.chmeetings.com/forms/5AB207DEB4CCB451" class="button primary">Sign Up for Impact Weekend</a>
+                <div style="text-align: center; margin: 30px 0;">
+                    <a href="https://9AF4623BEBD7FA6A.chmeetings.com/forms/5AB207DEB4CCB451" class="button primary" aria-label="Sign up to volunteer for Impact Weekend">Sign Up for Impact Weekend</a>
                 </div>
                 <p>
                    See you in Fort Worth!<br>God Bless,
@@ -264,16 +380,22 @@
                 </p>
             </div>
             <br>
-            <div style="text-align: center; margin-top: 20px;">
-                <a href="https://form.jotform.com/220944810814151" class="button primary">SFR Information</a>
-                <a href="https://youtu.be/CquJjvTD0Kk" class="button secondary">About SFR</a>
+            <div style="text-align: center; margin: 30px 0;">
+                <a href="https://form.jotform.com/220944810814151" class="button primary" aria-label="Get more information about SFR">SFR Information</a>
+                <a href="https://youtu.be/CquJjvTD0Kk" class="button secondary" aria-label="Watch video about SFR">About SFR</a>
             </div>
         </div>
         <br><br>
         <!-- Footer Section -->
         <div class="footer">
-            <p><strong>Spiritual First Responders</strong>, North Texas District UPCI</p>
-            <p>Email: <a href="mailto:gwheeler@christpentecostal.org">SFR Mail</a> | Phone: 817.271.9395</p>
+            <p><strong>Spiritual First Responders</strong><br>North Texas District UPCI</p>
+            <p>
+                Email: <a href="mailto:gwheeler@christpentecostal.org" aria-label="Send email to SFR">gwheeler@christpentecostal.org</a><br>
+                Phone: <a href="tel:+18172719395" aria-label="Call SFR">817.271.9395</a>
+            </p>
+            <p style="font-size: 11px; color: #888; margin-top: 15px;">
+                This email was sent regarding the SFR Impact Weekend event. If you have questions about volunteering, please contact us using the information above.
+            </p>
         </div>
     </div>
 </body>
