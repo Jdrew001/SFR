@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="color-scheme: light !important;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
     <title>Thank You - NTXD SFR Ministry Training Event 2026</title>
     <!--[if mso]>
     <xml>
@@ -19,6 +21,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color-scheme: light;
         }
         .container {
             max-width: unset !important;
@@ -218,23 +221,75 @@
             text-decoration: none !important;
         }
 
-        /* Force light mode */
-        @media (prefers-color-scheme: dark) {
-            body, .email-container {
-                background-color: #ffffff !important;
-                color: #000000 !important;
-            }
-        }
+        /* Gmail dark mode overrides */
         [data-ogsc] body,
         [data-ogsc] .email-container {
             background-color: #ffffff !important;
-            color: #000000 !important;
+            color: #333333 !important;
         }
-        u + #body a,
-        u + #body span,
-        u + #body div {
-            background-color: #ffffff !important;
-            color: #000000 !important;
+        [data-ogsc] .highlight-section {
+            background: #f5f7fa !important;
+            background-color: #f5f7fa !important;
+        }
+        [data-ogsc] .highlight-section p,
+        [data-ogsc] .content p,
+        [data-ogsc] .subtitle {
+            color: #333333 !important;
+            -webkit-text-fill-color: #333333 !important;
+        }
+        [data-ogsc] .qr-section p,
+        [data-ogsc] .qr-section h3,
+        [data-ogsc] .qr-label {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+        }
+        [data-ogsc] .button,
+        [data-ogsc] .button.primary {
+            background-color: rgb(9, 26, 59) !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+        }
+        u + #body .highlight-section p,
+        u + #body .content p,
+        u + #body .subtitle {
+            color: #333333 !important;
+            -webkit-text-fill-color: #333333 !important;
+        }
+        u + #body .qr-section p,
+        u + #body .qr-section h3,
+        u + #body .qr-label {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+        }
+        u + #body .button,
+        u + #body .button.primary {
+            background-color: rgb(9, 26, 59) !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+        }
+        @media (prefers-color-scheme: dark) {
+            body, .email-container {
+                background-color: #ffffff !important;
+                color: #333333 !important;
+            }
+            .highlight-section p,
+            .content p,
+            .subtitle {
+                color: #333333 !important;
+                -webkit-text-fill-color: #333333 !important;
+            }
+            .qr-section p,
+            .qr-section h3,
+            .qr-label {
+                color: #ffffff !important;
+                -webkit-text-fill-color: #ffffff !important;
+            }
+            .button,
+            .button.primary {
+                background-color: rgb(9, 26, 59) !important;
+                color: #ffffff !important;
+                -webkit-text-fill-color: #ffffff !important;
+            }
         }
     </style>
 </head>
@@ -250,24 +305,26 @@
             <h1 class="thank-you-header">Thank You!</h1>
             <p class="subtitle">NTXD SFR Ministry Training Event 2026</p>
 
-            <div class="highlight-section">
-                <p>Thank you for taking the time to attend our recent <strong>NTXD SFR Ministry Training Event</strong> at <strong>The Life Church in Dallas</strong>! We are grateful for your participation and your heart for ministry.</p>
+            <div class="highlight-section" style="background: #f5f7fa !important; background-color: #f5f7fa !important;">
+                <p style="color: #333333 !important; -webkit-text-fill-color: #333333 !important;">Thank you for taking the time to attend our recent <strong>NTXD SFR Ministry Training Event</strong> at <strong>The Life Church in Dallas</strong>! We are grateful for your participation and your heart for ministry.</p>
             </div>
 
-            <p>We trust that the training sessions were an encouragement and an equipping for the work God has called you to. Your presence made this event a success, and we look forward to seeing the impact you will continue to make in the North Texas District.</p>
+            <p style="color: #333333 !important; -webkit-text-fill-color: #333333 !important;">We trust that the training sessions were an encouragement and an equipping for the work God has called you to. Your presence made this event a success, and we look forward to seeing the impact you will continue to make in the North Texas District.</p>
 
             <!-- QR Code Section -->
             <div class="qr-section">
-                <h3>Access Event Media Resources</h3>
-                <p>The attached QR Code will give you access to <strong>Media Resources</strong> and notes from the<br><strong>NTXD SFR Ministry Training Event 2026 Media</strong>.</p>
+                <h3 style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">Access Event Media Resources</h3>
+                <p style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">The attached QR Code will give you access to <strong>Media Resources</strong> and notes from the<br><strong>NTXD SFR Ministry Training Event 2026 Media</strong>.</p>
                 <!-- QR Code: replace the src below with the absolute URL of the hosted QR code image (e.g. https://chmeetings-app.s3.us-east-1.amazonaws.com/your-qr-code.png) -->
                 <div class="qr-code-box">
-                    <img src="https://chmeetings-app.s3.us-east-1.amazonaws.com/qr_code_placeholder.png" alt="QR Code - NTXD SFR Ministry Training Event 2026 Media Resources">
+                    <a href="https://www.dropbox.com/scl/fo/16ltgeh0y9dw6xjyspqrg/ALiYwyuMF07Mqkb6O1Lm8jw?rlkey=lnbl1znza68yj1viv4g05qla3&e=2&st=3nc0pj0p&dl=0" target="_blank" aria-label="Open NTXD SFR Ministry Training Event 2026 Media Resources">
+                        <img src="https://chmeetings-app.s3.us-east-1.amazonaws.com/1776814673003-SFR+Training+Event+Media+2026.png" alt="QR Code - NTXD SFR Ministry Training Event 2026 Media Resources">
+                    </a>
                 </div>
-                <span class="qr-label">Scan to access Media Resources &amp; Event Notes</span>
+                <span class="qr-label" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">Scan to access Media Resources &amp; Event Notes</span>
             </div>
 
-            <p style="text-align: center; font-size: 13px; color: #777;">
+            <p style="text-align: center; font-size: 13px; color: #444444 !important; -webkit-text-fill-color: #444444 !important;">
                 If you are unable to scan the QR code, please reach out to us directly and we will send you the link to the media resources.
             </p>
         </div>
@@ -275,8 +332,8 @@
         <!-- Footer Section -->
         <div class="footer-section">
             <div class="footer-buttons">
-                <a href="https://form.jotform.com/220944810814151" class="button primary" aria-label="Get more information about SFR">SFR Information</a>
-                <a href="https://youtu.be/CquJjvTD0Kk" class="button secondary" aria-label="Watch video about SFR">About SFR</a>
+                <a href="https://form.jotform.com/220944810814151" class="button primary" style="background-color: rgb(9, 26, 59) !important; color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;" aria-label="Get more information about SFR">SFR Information</a>
+                <a href="https://youtu.be/CquJjvTD0Kk" class="button secondary" style="background-color: #ffffff !important; color: rgb(9, 26, 59) !important; -webkit-text-fill-color: rgb(9, 26, 59) !important;" aria-label="Watch video about SFR">About SFR</a>
             </div>
 
             <div class="footer-info">
