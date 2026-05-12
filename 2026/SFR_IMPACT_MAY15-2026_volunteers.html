@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: light !important;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    <title>SFR Impact Weekend - Irving, TX</title>
+    <!--[if mso]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color-scheme: light;
+        }
+        .container {
+            max-width: unset !important;
+        }
+        /* Better email client compatibility */
+        .email-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Improved mobile responsiveness */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                padding: 15px !important;
+                margin: 10px !important;
+            }
+            .content h2 {
+                font-size: 20px !important;
+                padding: 20px 15px !important;
+            }
+            .content h2 span:first-child {
+                font-size: 24px !important;
+                margin-bottom: 6px !important;
+            }
+            .border-content {
+                padding: 15px !important;
+                margin: 15px 0 !important;
+            }
+            .event-details h3 {
+                font-size: 18px !important;
+            }
+            .event-details p {
+                font-size: 14px !important;
+            }
+            .cta-button {
+                font-size: 16px !important;
+                padding: 12px 24px !important;
+            }
+            .agenda-item {
+                padding: 12px !important;
+            }
+        }
+        
+        table {
+            border-collapse: collapse;
+            border: none;
+        }
+        .header-section {
+            background: linear-gradient(135deg, rgb(9, 26, 59) 0%, #1a3a70 100%);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .header-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .content {
+            padding: 20px 0;
+        }
+        .content h1 {
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .content h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            background-color: rgb(9, 26, 59);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            border-radius: 8px;
+        }
+        .content h2 .first-line {
+            font-size: 28px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .content h2 .second-line {
+            font-size: 20px;
+            font-weight: normal;
+            display: block;
+        }
+        .content p {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .border-content {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 5px solid rgb(9, 26, 59);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .border-content p {
+            margin: 10px 0;
+            color: #333;
+            font-size: 13px;
+        }
+        .border-content p:first-child {
+            font-size: 15px;
+            font-weight: bold;
+            color: rgb(9, 26, 59);
+            margin-bottom: 15px;
+        }
+        .border-content .share-line {
+            font-style: italic;
+            color: #555;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: rgb(9, 26, 59) !important;
+            color: white !important;
+            padding: 15px 30px;
+            text-decoration: none !important;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #0a1a3d !important;
+            color: white !important;
+            text-decoration: none !important;
+        }
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .agenda-section {
+            margin-top: 30px;
+        }
+        .agenda-section h3 {
+            font-size: 22px;
+            color: rgb(9, 26, 59);
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .agenda-item {
+            background-color: white;
+            border-left: 4px solid rgb(9, 26, 59);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .agenda-item h4 {
+            color: rgb(9, 26, 59);
+            font-size: 18px;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+        .agenda-item p {
+            margin: 5px 0;
+            color: #555;
+            font-size: 13px;
+        }
+        .agenda-item .location {
+            font-style: italic;
+            color: #777;
+            font-size: 13px;
+        }
+        .map-link {
+            color: rgb(9, 26, 59) !important;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid rgb(9, 26, 59);
+            padding-bottom: 1px;
+        }
+        .map-link:hover {
+            color: #0a1a3d !important;
+            border-bottom-color: #0a1a3d;
+        }
+        .footer-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .footer-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            background-color: rgb(9, 26, 59) !important;
+            color: white !important;
+            padding: 12px 20px;
+            text-decoration: none !important;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 8px 3px;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0a1a3d !important;
+            color: white !important;
+            text-decoration: none !important;
+        }
+        .button.secondary {
+            background-color: white !important;
+            color: rgb(9, 26, 59) !important;
+            border: 2px solid rgb(9, 26, 59);
+        }
+        .button.secondary:hover {
+            background-color: rgb(9, 26, 59) !important;
+            color: white !important;
+            text-decoration: none !important;
+        }
+        .footer-info {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .footer-org {
+            font-size: 18px;
+            color: rgb(9, 26, 59);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .footer-district {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .footer-contact {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .footer-contact a {
+            color: rgb(9, 26, 59) !important;
+            text-decoration: none !important;
+            font-size: 12px;
+            transition: color 0.3s ease;
+        }
+        .footer-contact a:hover {
+            color: #1a3a70 !important;
+            text-decoration: none !important;
+        }
+        .footer-disclaimer {
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            line-height: 1.5;
+        }
+        @media only screen and (max-width: 600px) {
+            .footer-contact {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #ffc107;
+        }
+        .highlight p {
+            margin: 0;
+            color: #856404;
+            font-weight: 500;
+        }
+        /* Global link styles - remove default underlines and blue color */
+        a {
+            color: rgb(9, 26, 59) !important;
+            text-decoration: none !important;
+        }
+        a:hover {
+            color: #1a3a70 !important;
+            text-decoration: none !important;
+        }
+        .facebook-link {
+            color: #1877F2 !important;
+            text-decoration: underline !important;
+        }
+        .facebook-link:hover {
+            color: #145dbf !important;
+        }
+
+        /* Gmail dark mode overrides */
+        [data-ogsc] body,
+        [data-ogsc] .email-container {
+            background-color: #ffffff !important;
+            color: #555555 !important;
+        }
+        [data-ogsc] .border-content {
+            background: #f5f7fa !important;
+            background-color: #f5f7fa !important;
+        }
+        [data-ogsc] .content h1 {
+            color: #333333 !important;
+            -webkit-text-fill-color: #333333 !important;
+        }
+        [data-ogsc] .content h2 .first-line,
+        [data-ogsc] .content h2 .second-line {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+        }
+        [data-ogsc] .border-content p,
+        [data-ogsc] .content p,
+        [data-ogsc] .agenda-item p {
+            color: #555555 !important;
+            -webkit-text-fill-color: #555555 !important;
+        }
+        [data-ogsc] .agenda-section h3,
+        [data-ogsc] .agenda-item h4 {
+            color: rgb(9, 26, 59) !important;
+            -webkit-text-fill-color: rgb(9, 26, 59) !important;
+        }
+        [data-ogsc] .cta-button,
+        [data-ogsc] .button,
+        [data-ogsc] .button.primary {
+            background-color: rgb(9, 26, 59) !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+        }
+        [data-ogsc] .button.secondary {
+            background-color: #ffffff !important;
+            color: rgb(9, 26, 59) !important;
+            -webkit-text-fill-color: rgb(9, 26, 59) !important;
+        }
+        u + #body body,
+        u + #body .email-container {
+            background-color: #ffffff !important;
+            color: #555555 !important;
+        }
+        u + #body .border-content {
+            background: #f5f7fa !important;
+            background-color: #f5f7fa !important;
+        }
+        u + #body .content h1 {
+            color: #333333 !important;
+            -webkit-text-fill-color: #333333 !important;
+        }
+        u + #body .content h2 .first-line,
+        u + #body .content h2 .second-line {
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+        }
+        u + #body .border-content p,
+        u + #body .content p,
+        u + #body .agenda-item p {
+            color: #555555 !important;
+            -webkit-text-fill-color: #555555 !important;
+        }
+        u + #body .agenda-section h3,
+        u + #body .agenda-item h4 {
+            color: rgb(9, 26, 59) !important;
+            -webkit-text-fill-color: rgb(9, 26, 59) !important;
+        }
+        u + #body .cta-button,
+        u + #body .button,
+        u + #body .button.primary {
+            background-color: rgb(9, 26, 59) !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+        }
+        u + #body .button.secondary {
+            background-color: #ffffff !important;
+            color: rgb(9, 26, 59) !important;
+            -webkit-text-fill-color: rgb(9, 26, 59) !important;
+        }
+        @media (prefers-color-scheme: dark) {
+            body, .email-container {
+                background-color: #ffffff !important;
+                color: #555555 !important;
+            }
+            .border-content {
+                background: #f5f7fa !important;
+                background-color: #f5f7fa !important;
+            }
+            .content h1 {
+                color: #333333 !important;
+                -webkit-text-fill-color: #333333 !important;
+            }
+            .content h2 .first-line,
+            .content h2 .second-line {
+                color: #ffffff !important;
+                -webkit-text-fill-color: #ffffff !important;
+            }
+            .border-content p,
+            .content p,
+            .agenda-item p {
+                color: #555555 !important;
+                -webkit-text-fill-color: #555555 !important;
+            }
+            .agenda-section h3,
+            .agenda-item h4 {
+                color: rgb(9, 26, 59) !important;
+                -webkit-text-fill-color: rgb(9, 26, 59) !important;
+            }
+            .cta-button,
+            .button,
+            .button.primary {
+                background-color: rgb(9, 26, 59) !important;
+                color: #ffffff !important;
+                -webkit-text-fill-color: #ffffff !important;
+            }
+            .button.secondary {
+                background-color: #ffffff !important;
+                color: rgb(9, 26, 59) !important;
+                -webkit-text-fill-color: rgb(9, 26, 59) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header with banner image -->
+        <div class="header-section">
+            <img src="https://chmeetings-app.s3.us-east-1.amazonaws.com/1738299961326-banner.jpg" alt="Spiritual First Responders Banner - Impact Weekend" width="100%" style="height: auto; display: block;">
+        </div>
+        
+        <!-- Main content -->
+        <div class="content">
+            <h1>Greetings NTXD<br>Spiritual First Responders!</h1>
+            
+            <h2 style="background-color: rgb(9, 26, 59) !important;">
+                <div class="first-line" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">Mark your calendars</div>
+                <div class="second-line" style="color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">Be a part of the SFR Team coming to Irving, TX!</div>
+            </h2>
+            
+            <div class="border-content" style="background: #f5f7fa !important; background-color: #f5f7fa !important;">
+                <p style="color: rgb(9, 26, 59) !important; -webkit-text-fill-color: rgb(9, 26, 59) !important;">Your help is needed!</p>
+                <p style="color: #555555 !important; -webkit-text-fill-color: #555555 !important;">Every SFR volunteer will have the opportunity to make a tremendous impact over the course of this three-day event. Every day will be an amazing experience, but <strong>Saturday, May 16th</strong> is when volunteers are needed most, as we take the ministry directly into the Irving community!</p>
+                <p style="color: #555555 !important; -webkit-text-fill-color: #555555 !important;">Please register for this bilingual event by clicking on the link below to let us know if you are available and would like to volunteer.</p>
+            </div>
+            
+            <div class="button-container">
+                <a href="https://9AF4623BEBD7FA6A.chmeetings.com/forms/5D9FCD33AD9C4514" class="cta-button" style="background-color: rgb(9, 26, 59) !important; color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;">Sign Up for Impact Weekend</a>
+            </div>
+            
+            <div class="agenda-section">
+                <h3>SFR Impact Agenda:</h3>
+                
+                <div class="agenda-item">
+                    <h4>Friday, May 15th at 7:30 pm:</h4>
+                    <p>Focused prayer event led by Charlita Cloman (New Life Church &#x2013; Garland)</p>
+                    <p class="location">Location: <a href="https://maps.google.com/?q=Solid+Rock+Church,+121+S+Story+Road,+Irving,+TX+75061" class="map-link">Solid Rock Church, 121 S Story Road, Irving, TX 75061</a></p>
+                </div>
+                
+                <div class="agenda-item">
+                    <h4>Saturday, May 16th:</h4>
+                    <p><strong>9:45am – 12:45pm:</strong> Community Outreach (Meet at <a href="https://maps.google.com/?q=Solid+Rock+Church,+121+S+Story+Road,+Irving,+TX+75061" class="map-link">Solid Rock Church</a>)</p>
+                    <p><strong>1pm - 2pm:</strong> Setup for Impact Event</p>
+                    <p><strong>2pm - 4pm:</strong> Bless the Community Impact Event with Food, Bounce Houses, Giveaways, Music, Kids' ministry (Dallas First Church) and Pastors Ed Snyder and Frank Chavira (Solid Rock Church)</p>
+                </div>
+                
+                <div class="agenda-item">
+                    <h4>Sunday, May 17th:</h4>
+                    <p><strong>Spanish Service at 9:00 am</strong></p>
+                    <p><strong>English Service at 11:30 am</strong></p>
+                    <p class="location">Location: <a href="https://maps.google.com/?q=Solid+Rock+Church,+121+S+Story+Road,+Irving,+TX+75061" class="map-link">Solid Rock Church, 121 S Story Road, Irving, TX 75061</a></p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 25px;">
+                <p>Find out more about Solid Rock Church on Facebook:<br>
+                <a href="https://www.facebook.com/SRCIrving" class="facebook-link">https://www.facebook.com/SRCIrving</a></p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="font-size: 18px; color: rgb(9, 26, 59); font-weight: bold;">Be a part of what God is doing in Irving!</p>
+            </div>
+        </div>
+        
+        <!-- Footer Section -->
+        <div class="footer-section">
+            <div class="footer-buttons">
+                <a href="https://form.jotform.com/220944810814151" class="button primary" style="background-color: rgb(9, 26, 59) !important; color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;" aria-label="Get more information about SFR">SFR Information</a>
+                <a href="https://youtu.be/CquJjvTD0Kk" class="button secondary" style="background-color: #ffffff !important; color: rgb(9, 26, 59) !important; -webkit-text-fill-color: rgb(9, 26, 59) !important;" aria-label="Watch video about SFR">About SFR</a>
+            </div>
+            
+            <div class="footer-info">
+                <div class="footer-org">Spiritual First Responders</div>
+                <div class="footer-district">North Texas District UPCI</div>
+                
+                <div style="text-align: center; margin-top: 15px;">
+                    <div class="footer-contact" style="margin-bottom: 5px;">
+                        <a href="mailto:gwheeler@christpentecostal.org" aria-label="Send email to SFR">gwheeler@christpentecostal.org</a>
+                    </div>
+                    <div class="footer-contact">
+                        <a href="tel:+18172719395" aria-label="Call SFR">817.271.9395</a>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 15px;">
+                    <p style="font-size: 13px; color: #555; margin: 0;">
+                        God Bless!<br>
+                        <strong>Greg Wheeler</strong><br>
+                        Pastor, Christ Pentecostal Church<br>
+                        817-271-9395
+                    </p>
+                </div>
+                
+                <div class="footer-disclaimer">
+                    This email was sent regarding the SFR Impact Weekend event.<br>
+                    If you have questions about volunteering, please contact us using the information above.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
