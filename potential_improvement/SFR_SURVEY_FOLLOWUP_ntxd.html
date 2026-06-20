@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: light !important;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    <title>Survey Follow-Up - SFR Ministry Training</title>
+    <!--[if mso]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color-scheme: light;
+        }
+        .container {
+            max-width: unset !important;
+        }
+        /* Better email client compatibility */
+        .email-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Improved mobile responsiveness */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                padding: 15px !important;
+                margin: 10px !important;
+            }
+            .content h2 {
+                font-size: 20px !important;
+                padding: 20px 15px !important;
+            }
+            .thank-you-header {
+                font-size: 28px !important;
+            }
+            .stats-container {
+                flex-direction: column !important;
+            }
+            .stat-box {
+                margin: 10px 0 !important;
+                width: 100% !important;
+            }
+        }
+        
+        table {
+            border-collapse: collapse;
+            border: none;
+        }
+        .header-section {
+            background: linear-gradient(135deg, rgb(9, 26, 59) 0%, #1a3a70 100%);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .header-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .content {
+            padding: 20px 0;
+        }
+        .thank-you-header {
+            font-size: 36px;
+            color: rgb(9, 26, 59);
+            text-align: center;
+            margin: 30px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            font-size: 20px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        .content p {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .highlight-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 5px solid rgb(9, 26, 59);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .highlight-section p {
+            margin: 10px 0;
+            color: #333;
+            font-size: 13px;
+        }
+        .acknowledgment-section {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .acknowledgment-section h3 {
+            color: rgb(9, 26, 59);
+            font-size: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .acknowledgment-section p {
+            font-size: 13px;
+            line-height: 1.8;
+            color: #555;
+        }
+        .button {
+            display: inline-block;
+            background-color: rgb(9, 26, 59) !important;
+            color: white !important;
+            padding: 12px 20px;
+            text-decoration: none !important;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 8px 3px;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0a1a3d !important;
+            color: white !important;
+            text-decoration: none !important;
+        }
+        .button.secondary {
+            background-color: white !important;
+            color: rgb(9, 26, 59) !important;
+            border: 2px solid rgb(9, 26, 59);
+        }
+        .button.secondary:hover {
+            background-color: rgb(9, 26, 59) !important;
+            color: white !important;
+            text-decoration: none !important;
+        }
+        .footer-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 40px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .footer-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .footer-info {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .footer-org {
+            font-size: 18px;
+            color: rgb(9, 26, 59);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .footer-district {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .footer-contact {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .footer-contact a {
+            color: rgb(9, 26, 59) !important;
+            text-decoration: none !important;
+            font-size: 12px;
+            transition: color 0.3s ease;
+        }
+        .footer-contact a:hover {
+            color: #1a3a70 !important;
+            text-decoration: none !important;
+        }
+        .footer-disclaimer {
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            line-height: 1.5;
+        }
+        /* Global link styles - remove default underlines and blue color */
+        a {
+            color: rgb(9, 26, 59) !important;
+            text-decoration: none !important;
+        }
+        a:hover {
+            color: #1a3a70 !important;
+            text-decoration: none !important;
+        }
+        @media only screen and (max-width: 600px) {
+            .footer-contact {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        /* Gmail dark mode overrides */
+        [data-ogsc] body,
+        [data-ogsc] .email-container {
+            background-color: #ffffff !important;
+            color: #333333 !important;
+        }
+        [data-ogsc] .highlight-section {
+            background: #f5f7fa !important;
+            background-color: #f5f7fa !important;
+        }
+        [data-ogsc] .acknowledgment-section {
+            background: #ffffff !important;
+            background-color: #ffffff !important;
+        }
+        [data-ogsc] .highlight-section p,
+        [data-ogsc] .acknowledgment-section p,
+        [data-ogsc] .content p,
+        [data-ogsc] .subtitle {
+            color: #333333 !important;
+            -webkit-text-fill-color: #333333 !important;
+        }
+        [data-ogsc] .button,
+        [data-ogsc] .button.primary {
+            background-color: rgb(9, 26, 59) !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+        }
+        [data-ogsc] .button.secondary {
+            background-color: #ffffff !important;
+            color: rgb(9, 26, 59) !important;
+            -webkit-text-fill-color: rgb(9, 26, 59) !important;
+        }
+        [data-ogsc] .footer-disclaimer,
+        [data-ogsc] .footer-district {
+            color: #555555 !important;
+            -webkit-text-fill-color: #555555 !important;
+        }
+        u + #body .button,
+        u + #body .button.primary {
+            background-color: rgb(9, 26, 59) !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+        }
+        u + #body .button.secondary {
+            background-color: #ffffff !important;
+            color: rgb(9, 26, 59) !important;
+            -webkit-text-fill-color: rgb(9, 26, 59) !important;
+        }
+        u + #body .footer-disclaimer,
+        u + #body .footer-district {
+            color: #555555 !important;
+            -webkit-text-fill-color: #555555 !important;
+        }
+        @media (prefers-color-scheme: dark) {
+            body, .email-container {
+                background-color: #ffffff !important;
+                color: #333333 !important;
+            }
+            .highlight-section p,
+            .acknowledgment-section p,
+            .content p,
+            .subtitle {
+                color: #333333 !important;
+                -webkit-text-fill-color: #333333 !important;
+            }
+            .button,
+            .button.primary {
+                background-color: rgb(9, 26, 59) !important;
+                color: #ffffff !important;
+                -webkit-text-fill-color: #ffffff !important;
+            }
+            .button.secondary {
+                background-color: #ffffff !important;
+                color: rgb(9, 26, 59) !important;
+                -webkit-text-fill-color: rgb(9, 26, 59) !important;
+            }
+            .footer-disclaimer,
+            .footer-district {
+                color: #555555 !important;
+                -webkit-text-fill-color: #555555 !important;
+            }
+        }
+        u + #body .highlight-section p,
+        u + #body .acknowledgment-section p,
+        u + #body .content p,
+        u + #body .subtitle {
+            color: #333333 !important;
+            -webkit-text-fill-color: #333333 !important;
+        }
+        u + #body .button,
+        u + #body .button.primary {
+            background-color: rgb(9, 26, 59) !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
+        }
+        @media (prefers-color-scheme: dark) {
+            body, .email-container {
+                background-color: #ffffff !important;
+                color: #333333 !important;
+            }
+            .highlight-section p,
+            .acknowledgment-section p,
+            .content p,
+            .subtitle {
+                color: #333333 !important;
+                -webkit-text-fill-color: #333333 !important;
+            }
+            .button,
+            .button.primary {
+                background-color: rgb(9, 26, 59) !important;
+                color: #ffffff !important;
+                -webkit-text-fill-color: #ffffff !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header with banner image -->
+        <div class="header-section">
+            <img src="https://chmeetings-app.s3.us-east-1.amazonaws.com/1738299961326-banner.jpg" alt="Spiritual First Responders Banner - Impact Weekend" width="100%" style="height: auto; display: block;">
+        </div>
+        
+        <!-- Main content -->
+        <div class="content">
+            <h1 class="thank-you-header">Greetings In Jesus Name!</h1>
+            <p class="subtitle">NTXD SFR Ministry Training Event Follow-Up</p>
+            
+            <div class="highlight-section" style="background: #f5f7fa !important; background-color: #f5f7fa !important;">
+                <p style="color: #333333 !important; -webkit-text-fill-color: #333333 !important;">Thank you for taking the time to attend our recent NTXD SFR Ministry Training Event at The Life Church in Dallas! As part of our commitment to continually improve our training programs, we would like to ask for your feedback.</p>
+            </div>
+            
+            <div class="acknowledgment-section" style="background: #ffffff !important; background-color: #ffffff !important;">
+                <p style="color: #333333 !important; -webkit-text-fill-color: #333333 !important;">If you have not yet completed the survey, would you please take a few minutes to do so? Your input is extremely valuable and will help us make necessary changes and improvements.</p>
+                <p style="color: #333333 !important; -webkit-text-fill-color: #333333 !important;">Please click on the following link to access the survey:</p>
+                <p style="text-align: center; margin-top: 20px;">
+                    <a href="https://9af4623bebd7fa6a.chmeetings.com/forms/28882A544FC7559F" class="button primary" style="background-color: rgb(9, 26, 59) !important; color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;" aria-label="Open NTXD SFR ministry training survey">Complete the Survey</a>
+                </p>
+                <p style="color: #333333 !important; -webkit-text-fill-color: #333333 !important;">We appreciate your support and look forward to hearing your thoughts. Thank you!</p>
+            </div>
+        </div>
+        
+        <!-- Footer Section -->
+        <div class="footer-section">
+            <div class="footer-buttons">
+                <a href="https://form.jotform.com/220944810814151" class="button primary" style="background-color: rgb(9, 26, 59) !important; color: #ffffff !important; -webkit-text-fill-color: #ffffff !important;" aria-label="Get more information about SFR">SFR Information</a>
+                <a href="https://youtu.be/CquJjvTD0Kk" class="button secondary" style="background-color: #ffffff !important; color: rgb(9, 26, 59) !important; -webkit-text-fill-color: rgb(9, 26, 59) !important;" aria-label="Watch video about SFR">About SFR</a>
+            </div>
+            
+            <div class="footer-info">
+                <div class="footer-org">Spiritual First Responders</div>
+                <div class="footer-district" style="color: #555555 !important; -webkit-text-fill-color: #555555 !important;">North Texas District UPCI</div>
+                
+                <div style="text-align: center; margin-top: 15px;">
+                    <div class="footer-contact" style="margin-bottom: 5px;">
+                        <a href="mailto:gwheeler@christpentecostal.org" aria-label="Send email to SFR">gwheeler@christpentecostal.org</a>
+                    </div>
+                    <div class="footer-contact">
+                        <a href="tel:+18172719395" aria-label="Call SFR">817.271.9395</a>
+                    </div>
+                </div>
+                
+                <div class="footer-disclaimer" style="color: #555555 !important; -webkit-text-fill-color: #555555 !important;">
+                    Thank you for your continued support of Spiritual First Responders.<br>
+                    Together, we're making a difference in North Texas!
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
